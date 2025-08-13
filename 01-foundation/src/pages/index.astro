@@ -1,0 +1,23 @@
+---
+import CustomTitle from "../components/CustomTitle.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Home Page">
+	<!-- Pasar title por props -->
+	<CustomTitle title="Juan Diego Marín Morales" />
+	<p>Momento actual: {new Date().toLocaleTimeString()}</p>
+	<p id="currentTime">Momento actual real:</p>
+	<!-- <footer>Año 2025</footer> -->
+	<script>
+		// Hacer que no sea estatico la fecha
+		// const footer = document.querySelector("footer") as HTMLElement;
+		// footer.innerText = `Año actual: ${new Date().getFullYear()}`;
+
+		const currentTimeElement = document.querySelector(
+			"currentTime",
+		) as HTMLParagraphElement;
+
+		currentTimeElement.innerText = `Momento actual real: ${new Date().toLocaleTimeString()}`;
+	</script>
+</MainLayout>
