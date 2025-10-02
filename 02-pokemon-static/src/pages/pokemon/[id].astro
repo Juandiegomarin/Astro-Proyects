@@ -1,9 +1,17 @@
 ---
 import type { GetStaticPaths } from "astro";
-import type { PokemonListResponse } from "../../interfaces/pokemon-list.response";
+import type { PokemonListResponse } from "@interfaces/pokemon-list.response";
 
-import MainLayout from "../../layouts/MainLayout.astro";
-import PokemonCard from "../../components/pokemons/PokemonCard.astro";
+import MainLayout from "@layouts/MainLayout.astro";
+
+//Relativo
+//import PokemonCard from "../../components/pokemons/PokemonCard.astro";
+
+//Absolue
+//import PokemonCard from "src/components/pokemons/PokemonCard.astro";
+
+// Path Alias
+import PokemonCard from "@components/pokemons/PokemonCard.astro";
 
 // Get static paths => declarar las vistas disponibles directamente
 // Hacer async para hacer llamadas fetch
@@ -49,7 +57,7 @@ const audioSrc = `https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pok
 
 <style>
     /* Referenciar de donde tiene que coger los estilos de tailwind */
-    @reference "../../styles/global.css";
+    @reference "@styles/global.css";
     a {
         @apply hover:underline text-blue-500;
     }
