@@ -1,17 +1,17 @@
-# Dependencias
-node_modules/
-**/node_modules/
+# # Dependencias
+# node_modules/
+# **/node_modules/
 
-# Builds de Astro
-dist/
-**/dist/
-.astro/
-**/.astro/
+# # Builds de Astro
+# dist/
+# **/dist/
+# .astro/
+# **/.astro/
 
-# Logs
-*.log
+# # Logs
+# *.log
 
-# Archivos de entorno
-.env
-.env.*
-!.env.example
+# # Archivos de entorno
+# .env
+# .env.*
+# !.env.example
